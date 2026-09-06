@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Mohid ❤️</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: #061a1b;
+            color: #f4f7f2;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(64, 180, 160, 0.14), transparent 28%),
+                radial-gradient(circle at 80% 70%, rgba(39, 125, 161, 0.14), transparent 30%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -30px;
+            color: rgba(255, 255, 255, 0.16);
+            font-size: 18px;
+            animation: floatUp linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            animation: fadeUp 1.5s ease;
+            z-index: 2;
+        }
+
+        .small-title {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #8ed5c7;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 12vw, 115px);
+            font-weight: normal;
+            line-height: 0.95;
+            margin-bottom: 25px;
+            color: #ffffff;
+            text-shadow: 0 0 35px rgba(110, 210, 190, 0.25);
+        }
+
+        .hero h1 span {
+            color: #83d2c0;
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #c7d9d5;
+            max-width: 620px;
+            margin: auto;
+        }
+
+        .scroll {
+            margin-top: 45px;
+            font-size: 12px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #79bcb1;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+        }
+
+        section {
+            position: relative;
+            z-index: 2;
+            padding: 100px 20px;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title p {
+            color: #80cbbb;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin-bottom: 12px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(34px, 6vw, 58px);
+            font-weight: normal;
+        }
+
+        .photo-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .photo-wrapper {
+            position: relative;
+        }
+
+        .photo-wrapper img {
+            width: 100%;
+            max-height: 700px;
+            object-fit: cover;
+            border-radius: 22px;
+            display: block;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 18px;
+            left: 18px;
+            right: 18px;
+            padding: 14px 18px;
+            background: rgba(4, 23, 24, 0.75);
+            backdrop-filter: blur(12px);
+            border-radius: 14px;
+            color: white;
+            font-style: italic;
+        }
+
+        .photo-text h3 {
+            font-size: 40px;
+            font-weight: normal;
+            margin-bottom: 22px;
+        }
+
+        .photo-text h3 span {
+            color: #83d2c0;
+        }
+
+        .photo-text p {
+            color: #c4d3d0;
+            line-height: 2;
+            font-size: 16px;
+        }
+
+        .poetry {
+            background: rgba(255, 255, 255, 0.035);
+            border-top: 1px solid rgba(255,255,255,0.08);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .poetry-box {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            padding: 65px 35px;
+            border-radius: 25px;
+            background: rgba(14, 51, 53, 0.5);
+            box-shadow: 0 25px 80px rgba(0,0,0,0.2);
+        }
+
+        .poetry-mark {
+            font-size: 55px;
+            color: #83d2c0;
+            opacity: 0.7;
+            margin-bottom: 20px;
+        }
+
+        .poetry-text {
+            font-size: clamp(23px, 4vw, 35px);
+            line-height: 2;
+            font-style: italic;
+            color: #f5f7f5;
+            direction: rtl;
+        }
+
+        .poetry-heart {
+            margin-top: 25px;
+            font-size: 27px;
+        }
+
+        .letter {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .letter-paper {
+            background: #edf3ec;
+            color: #173536;
+            padding: clamp(30px, 6vw, 70px);
+            border-radius: 5px;
+            box-shadow: 0 30px 100px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .letter-paper::before {
+            content: "♡";
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 35px;
+            color: #5d948b;
+        }
+
+        .letter-paper h2 {
+            font-size: 40px;
+            font-weight: normal;
+            margin-bottom: 35px;
+            color: #183d3d;
+        }
+
+        .letter-paper p {
+            font-size: 17px;
+            line-height: 2;
+            margin-bottom: 27px;
+        }
+
+        .signature {
+            font-size: 25px;
+            font-style: italic;
+            color: #39756d;
+            margin-top: 35px;
+        }
+
+        .memories {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 45px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .memory-photo img {
+            width: 100%;
+            max-height: 750px;
+            object-fit: cover;
+            border-radius: 22px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        }
+
+        .memory-text {
+            text-align: center;
+        }
+
+        .memory-text h3 {
+            font-size: 35px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .memory-text p {
+            color: #c7d7d3;
+            line-height: 2;
+            font-size: 16px;
+        }
+
+        .open-section {
+            background: rgba(255,255,255,0.025);
+        }
+
+        .open-list {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        details {
+            margin-bottom: 16px;
+            background: rgba(16, 55, 57, 0.65);
+            border: 1px solid rgba(130, 210, 195, 0.13);
+            border-radius: 17px;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        details:hover {
+            border-color: rgba(130, 210, 195, 0.35);
+            transform: translateY(-2px);
+        }
+
+        summary {
+            cursor: pointer;
+            list-style: none;
+            padding: 23px 25px;
+            font-size: 18px;
+            color: #e8f3f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            font-size: 25px;
+            color: #83d2c0;
+        }
+
+        details[open] summary::after {
+            content: "×";
+        }
+
+        .note {
+            padding: 0 25px 27px 25px;
+            color: #bfd0cc;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        .final {
+            text-align: center;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .final-content {
+            max-width: 750px;
+        }
+
+        .final h2 {
+            font-size: clamp(45px, 9vw, 85px);
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .final h2 span {
+            color: #83d2c0;
+            font-style: italic;
+        }
+
+        .final p {
+            color: #c5d5d1;
+            line-height: 2;
+            font-size: 17px;
+        }
+
+        .final-heart {
+            font-size: 55px;
+            margin-top: 35px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.13);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px 45px;
+            color: #6e9992;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 750px) {
+
+            .photo-card {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-text {
+                text-align: center;
+            }
+
+            section {
+                padding: 75px 17px;
+            }
+
+            .letter-paper {
+                padding: 30px 23px;
+            }
+
+            .letter-paper p {
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            .poetry-box {
+                padding: 45px 20px;
+            }
+
+            .poetry-text {
+                line-height: 1.8;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="hearts">
+        <span class="heart" style="left:5%; animation-duration:12s; animation-delay:1s;">♡</span>
+        <span class="heart" style="left:15%; animation-duration:16s; animation-delay:4s;">♥</span>
+        <span class="heart" style="left:28%; animation-duration:13s; animation-delay:2s;">♡</span>
+        <span class="heart" style="left:42%; animation-duration:17s; animation-delay:6s;">♥</span>
+        <span class="heart" style="left:55%; animation-duration:14s; animation-delay:3s;">♡</span>
+        <span class="heart" style="left:67%; animation-duration:18s; animation-delay:7s;">♥</span>
+        <span class="heart" style="left:79%; animation-duration:13s; animation-delay:5s;">♡</span>
+        <span class="heart" style="left:91%; animation-duration:16s; animation-delay:2s;">♥</span>
+    </div>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                a little something for you
+            </div>
+
+            <h1>
+                Happy Birthday<br>
+                <span>Mohid</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                To the boy who somehow became my favourite person,
+                my favourite notification, my favourite conversation,
+                and my favourite place to be.
+            </p>
+
+            <div class="scroll">
+                ↓ keep scrolling, birthday boy ↓
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MOHID PHOTO -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="photo-card">
+
+                <div class="photo-wrapper">
+
+                    <img src="mohid.jpg" alt="Mohid">
+
+                    <div class="photo-caption">
+                        the birthday boy himself ♡
+                    </div>
+
+                </div>
+
+                <div class="photo-text">
+
+                    <h3>
+                        There is just something about <span>you.</span>
+                    </h3>
+
+                    <p>
+                        I could sit here and write a hundred things about you,
+                        and I still feel like I would somehow forget something.
+                        You are genuinely one of the most beautiful parts of my life,
+                        and I hope you never forget that.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- POETRY -->
+
+    <section class="poetry">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <p>because you love poetry</p>
+
+                <h2>A few words for you</h2>
+
+            </div>
+
+            <div class="poetry-box">
+
+                <div class="poetry-mark">
+                    ❝
+                </div>
+
+                <div class="poetry-text">
+
+                    تیری آنکھوں کی سہولت ہو میسر جس کو<br>
+                    وہ بھلا چاند ستاروں کو کہاں دیکھے گا<br>
+                    روبرو عشق ہو اور عشق بھی تیرے جیسا<br>
+                    پھر کوئی دل کے خسارے کو کہاں دیکھے گا
+
+                </div>
+
+                <div class="poetry-heart">
+                    ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOVE LETTER -->
+
+    <section>
+
+        <div class="letter">
+
+            <div class="section-title">
+
+                <p>the part I really wanted you to read</p>
+
+                <h2>A letter for you</h2>
+
+            </div>
+
+
+            <div class="letter-paper">
+
+                <h2>My Mohid,</h2>
+
+
+                <p>
+                    Happy birthday to my Mohid, my favourite person, my safest place,
+                    and honestly one of the most beautiful things that has ever happened
+                    to me. I don't even know where to begin because there is so much I
+                    want to say to you and somehow every time I try to put it into words,
+                    words just feel too small. You have become such an important part of
+                    my life that sometimes I genuinely wonder how my days used to feel
+                    before you were in them. You are not just someone I love, you are
+                    someone I look for in everything. In the little things that happen
+                    during my day, in the things I want to tell someone first, in the
+                    random thoughts that come into my head, somehow it is always you.
+                    You have this way of making ordinary moments feel special just by
+                    being there. Even the simplest conversations with you mean more to me
+                    than you probably realise. I love your voice, your way of talking,
+                    your silly little habits, the way you make me laugh when I am not even
+                    in the mood to smile, and even the things you do that annoy me because
+                    somehow I would still choose all of it again. I love knowing that
+                    somewhere in this huge world there is a person who feels like home to
+                    me, and that person is you.
+                </p>
+
+
+                <p>
+                    Sometimes I sit and think about how lucky I am that out of all the
+                    people in the world, somehow our paths crossed. There are billions of
+                    people, billions of stories, and somehow mine became connected to yours.
+                    I don't think you understand how much that means to me. You have seen
+                    different versions of me, the happy one, the emotional one, the annoying
+                    one, the dramatic one, the sleepy one, the overthinking one, and somehow
+                    you are still here. You have listened to me talk about the most random
+                    things and somehow made me feel like they mattered. You have given me
+                    comfort without even knowing how badly I needed it sometimes. You have
+                    made me feel loved in ways I did not even know I needed to be loved.
+                    And I hope you know that I notice it. I notice the little things.
+                    I notice when you remember something I said ages ago. I notice when
+                    you try to make me feel better. I notice when you stay even when I am
+                    being difficult. I notice every little effort, even the ones you
+                    probably think are too small to matter. They matter to me. You matter
+                    to me. More than I can explain properly.
+                </p>
+
+
+                <p>
+                    You know how much you love poetry, so maybe if I were a poet, I would
+                    write pages and pages about you. I would write about how somehow your
+                    name sounds softer when it is mine to say. I would write about how some
+                    people enter your life like a passing season, but some people become the
+                    reason you start looking forward to every season, and you became that
+                    person for me. If I could turn my feelings into poetry, I think every
+                    verse would somehow end with your name. Maybe I would write,
+                    "Mohid, tum woh shakhs ho jise lafzon mein bayan karna mushkil hai,
+                    kyun ke jo dil mein basa ho, usay alfaaz mein kaise sameta ja sakta hai."
+                    And maybe I would write about your smile, your eyes, your presence,
+                    and all the little things about you that I have fallen for without even
+                    realising when it happened. You are the kind of person who makes me
+                    believe that some people really are written into our lives for a reason.
+                    And if there is such a thing as being written together somewhere,
+                    then I hope my name is somewhere close to yours.
+                </p>
+
+
+                <p>
+                    On your birthday, more than anything, I want you to know how proud I am
+                    of you. I hope this year brings you closer to every dream you have,
+                    even the ones you have not told me about yet. I hope you get the kind
+                    of happiness that stays even after the excitement of a good day is gone.
+                    I hope you find peace in the moments when life gets difficult. I hope
+                    you never forget how capable you are, even on the days when you doubt
+                    yourself. I want to see you grow, succeed, become everything you have
+                    ever wanted to become, and I want to be there clapping the loudest when
+                    you do. I want to see you achieve things that once seemed impossible to
+                    you. I want to hear you tell me about your achievements with that
+                    happiness in your voice. And when life does not go according to plan,
+                    I want you to remember that you will never have to face everything alone.
+                    I will always want to be the person you can come back to, the person
+                    you can talk to, the person you can be completely yourself around
+                    without worrying about being judged.
+                </p>
+
+
+                <p>
+                    I wish I could give you everything you deserve today. I wish I could
+                    put every beautiful thing in the world into one little box and give it
+                    to you, because even that would still feel like it is not enough.
+                    So instead, I am giving you my words, my love, my prayers, and all the
+                    feelings I sometimes struggle to say out loud. I pray that Allah
+                    protects you, keeps you happy, gives you a long and beautiful life,
+                    opens doors for you that you never imagined would open, and keeps your
+                    heart soft even when life gives you reasons to become hard. I pray that
+                    every year of your life becomes better than the one before it. I pray
+                    that you are surrounded by people who genuinely love you and want the
+                    best for you. And selfishly, I pray that I get to remain one of those
+                    people for a very, very long time.
+                </p>
+
+
+                <p>
+                    I hope one day when we look back at this birthday, we laugh at how young
+                    we were and how much we thought we knew about life. I hope we have
+                    countless birthdays to celebrate together, countless cakes, countless
+                    late night conversations, countless stupid arguments that we eventually
+                    laugh about, countless pictures that we will be embarrassed to look at
+                    later, and countless memories that only we will understand. I want to
+                    know all the versions of you that are still waiting to exist. I want to
+                    know the person you become at twenty, twenty five, thirty and every age
+                    after that. I want to see how your dreams change, how your laugh changes,
+                    how life changes you, and I hope through all of those changes, I am still
+                    somewhere beside you. Maybe older, maybe more mature, maybe still
+                    annoying you for absolutely no reason, but still there.
+                </p>
+
+
+                <p>
+                    Mohid, if I had to choose one thing to wish for you today, it would be
+                    that you never forget how loved you are. Not just by me, but by the
+                    people whose lives you have touched in ways you may never realise.
+                    You deserve to know that your existence matters. Your presence matters.
+                    Your dreams matter. Your happiness matters. And to me, you matter in a
+                    way that is difficult to explain without sounding like I am exaggerating,
+                    but I am not. I love you in the quiet moments, in the loud moments,
+                    when we are laughing, when we are arguing, when we are talking for hours,
+                    and even when we have nothing to say. I love you in all the little
+                    ordinary moments that probably mean nothing to anyone else but somehow
+                    mean everything to me. You have become a part of my heart so naturally
+                    that I cannot remember when it happened. I just know that one day you
+                    were there, and then suddenly you were everywhere.
+                </p>
+
+
+                <p>
+                    So happy birthday, my love. Happy birthday to the person who somehow
+                    became my favourite notification, my favourite conversation, my favourite
+                    person to bother, my favourite person to miss, and my favourite person
+                    to love. I hope today reminds you of just how special you are. I hope
+                    you smile a lot. I hope you eat something you love. I hope you feel
+                    celebrated. And I hope somewhere between all the birthday wishes you
+                    receive, you remember that there is one girl sitting somewhere who is
+                    ridiculously grateful that you were born. Because if you had not been
+                    born, I would have never gotten to know you, never gotten to love you,
+                    never gotten to call you mine, and honestly, I cannot imagine my life
+                    without the version of it that has you in it.
+                </p>
+
+
+                <p>
+                    Happy birthday, Mohid. May your life be as beautiful as the poetry you
+                    love, and may I always have a place somewhere in the story. I love you
+                    more than these words can hold, and if I had another thousand pages,
+                    I would still find something new to say about you. Happy birthday,
+                    my baby. ❤️
+                </p>
+
+
+                <div class="signature">
+                    Always your baby,
+                    <br>
+                    me ❤️
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OUR PHOTO -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <p>one of my favourite memories</p>
+
+                <h2>Us.</h2>
+
+            </div>
+
+            <div class="memories">
+
+                <div class="memory-photo">
+
+                    <img src="us.jpg" alt="Mohid and me">
+
+                </div>
+
+                <div class="memory-text">
+
+                    <h3>
+                        My favourite kind of picture is one that has <em>us</em> in it.
+                    </h3>
+
+                    <p>
+                        There is something about having a memory captured forever.
+                        A moment that we can look back at years from now and remember
+                        exactly how it felt. I hope this is just one of the many pictures
+                        we collect together. I hope there are so many more moments,
+                        places, birthdays, random days, bad pictures, good pictures,
+                        and memories waiting for us.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OPEN WHEN -->
+
+    <section class="open-section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <p>for whenever you need me</p>
+
+                <h2>Open when...</h2>
+
+            </div>
+
+
+            <div class="open-list">
+
+
+                <details>
+
+                    <summary>
+                        Open when you're sad 🥺
+                    </summary>
+
+                    <div class="note">
+
+                        I know I cannot magically fix everything that is making you
+                        sad, but I want you to remember that you don't have to pretend
+                        to be okay around me. You can tell me everything, even the things
+                        you think are stupid or too small. I will listen. I will stay.
+                        And if all you need is someone to sit quietly with you, then
+                        I can be that person too. Please remember that bad days do not
+                        define your life. This feeling will pass. Until it does,
+                        you have me. Come here, birthday boy. You are loved more than
+                        you know. ❤️
+
+                    </div>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Open when you're happy 🥰
+                    </summary>
+
+                    <div class="note">
+
+                        I hope you are smiling while reading this because knowing you
+                        are happy is one of my favourite things. Whatever happened,
+                        I hope you enjoy every second of it. Tell me about it. Send me
+                        ten messages about it if you want. I want to hear your excitement.
+                        Your happiness makes me happy too, and I hope life gives you
+                        thousands of reasons to smile like this.
+
+                    </div>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Open when you miss me 🫶🏻
+                    </summary>
+
+                    <div class="note">
+
+                        If you miss me right now, then congratulations because I probably
+                        miss you too. Just imagine me sitting there beside you, annoying
+                        you, stealing your attention and refusing to let you be serious
+                        for five minutes. Until I can actually be there, consider this
+                        little note my hug. You are stuck with me, unfortunately.
+                        There is no return policy. ❤️
+
+                    </div>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Open when you're angry at me 😭
+                    </summary>
+
+                    <div class="note">
+
+                        Okay first of all, breathe. Second of all, I probably deserve at
+                        least some of your anger because I am not always the easiest person
+                        to deal with. But please do not let one bad moment make you forget
+                        everything good between us. Tell me what is wrong instead of
+                        keeping it inside. We can argue, we can disagree, we can get annoyed
+                        with each other, but I never want you to doubt how much I love you.
+                        Now come back to me when you're done being mad. I have decided
+                        that you are allowed to be angry for exactly five business minutes.
+
+                    </div>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Open when you need motivation 🌙
+                    </summary>
+
+                    <div class="note">
+
+                        You are capable of so much more than you sometimes give yourself
+                        credit for. I hope you keep going even when things feel slow.
+                        You do not have to have everything figured out today. Take your
+                        time, keep moving, and remember why you started. I believe in you.
+                        And when you finally get where you wanted to go, I hope you look
+                        back and realise that every difficult day was worth surviving.
+
+                    </div>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Open when you can't sleep 🌙
+                    </summary>
+
+                    <div class="note">
+
+                        Since I cannot magically appear beside you and tell you to sleep,
+                        this note will have to do. Put your phone down after reading this,
+                        close your eyes and stop thinking about absolutely everything at
+                        once. And if your brain refuses to cooperate, just imagine us
+                        somewhere peaceful, talking about completely random things until
+                        one of us falls asleep. Goodnight, my love. Sleep properly.
+                        You have a birthday boy reputation to maintain tomorrow.
+
+                    </div>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Open when you want to know how much I love you ❤️
+                    </summary>
+
+                    <div class="note">
+
+                        More than I know how to explain. More than I manage to say.
+                        More than you probably realise when we are just talking about
+                        completely random things. I love you in the ordinary moments.
+                        I love you when you make me laugh. I love you when you annoy me.
+                        I love you when we talk for hours and I love you even when we
+                        have absolutely nothing to say. I love the person you are now,
+                        and I want to know every version of the person you are going to
+                        become. So if you ever wonder whether you are loved, come back
+                        here and read this again. You are. Completely. ❤️
+
+                    </div>
+
+                </details>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section class="final">
+
+        <div class="final-content">
+
+            <div class="small-title">
+                one last thing
+            </div>
+
+            <h2>
+                I love you,<br>
+                <span>Mohid.</span>
+            </h2>
+
+            <p>
+                Out of all the people I could have met, somehow I met you.
+                Out of all the stories I could have lived, somehow mine became
+                connected to yours. And if I could choose again, I would still
+                choose you.
+            </p>
+
+            <div class="final-heart">
+                ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        made with way too much love for Mohid ♡
+    </footer>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const hearts = document.querySelectorAll(".heart");
+
+            hearts.forEach(function (heart, index) {
+
+                heart.style.animationDelay = (index * 0.7) + "s";
+
+            });
+
+        });
+
+    </script>
+
+</body>
+  </html>
